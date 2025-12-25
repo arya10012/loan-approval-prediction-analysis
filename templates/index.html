@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Approval Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h1>Loan Approval Prediction</h1>
+
+    <form action="/predict" method="post">
+
+        <label>Credit History</label>
+        <select name="Credit_History" required>
+            <option value="">Select</option>
+            <option value="1">Good</option>
+            <option value="0">Bad</option>
+        </select>
+
+        <label>Property Area</label>
+        <select name="Property_Area" required>
+            <option value="">Select</option>
+            <option value="0">Rural</option>
+            <option value="1">Urban</option>
+            <option value="2">Semiurban</option>
+        </select>
+
+        <label>Applicant Income</label>
+        <input type="number" name="Income" placeholder="Enter income" required>
+
+        <button type="submit">Check Loan Eligibility</button>
+
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <h2>{{ prediction }}</h2>
+        </div>
+    {% endif %}
+
+</body>
+</html>
