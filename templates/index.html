@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Loan Approval Prediction</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
 
     <h1>Loan Approval Prediction</h1>
@@ -34,10 +36,11 @@
     </form>
 
     {% if prediction %}
-        <div class="result">
-            <h2>{{ prediction }}</h2>
-        </div>
+    <div class="result">
+        <h2>{{ prediction }}</h2>
+    </div>
     {% endif %}
 
 </body>
+
 </html>

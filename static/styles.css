@@ -1,72 +1,126 @@
-body {
-    /* Create a gradient background */
-    background: linear-gradient(90deg, #FF7F50, #1E90FF, #32CD32, #FFD700);
-    background-size: 300% 300%;
-    animation: gradientBG 8s infinite alternate;
+/* ===== Google Font ===== */
 
-    /* Set font color to black */
-    color: black;
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ===== Reset ===== */
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* ===== Page Background ===== */
+
+body {
+    min-height: 100vh;
+    background: linear-gradient( rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url("/static/bg.avif") center / cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: #f8fafc;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
+
+/* ===== Title ===== */
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
 }
 
+
+/* ===== Card Form ===== */
+
 form {
-    background: rgba(255, 255, 255, 0.9); /* White with some transparency */
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    width: 300px;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+}
+
+
+/* ===== Labels ===== */
 
 label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #334155;
 }
 
-input {
+
+/* ===== Inputs & Select ===== */
+
+input,
+select {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #cbd5f5;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
 }
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+
+/* ===== Button ===== */
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
     width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.35);
+    opacity: 0.95;
 }
 
-h2 {
-    color: #2c3e50;
+
+/* ===== Result Card ===== */
+
+.result {
     margin-top: 20px;
-    font-size: 1.5em;
+    background: #ecfeff;
+    border-left: 4px solid #22d3ee;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.result h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0f172a;
 }
