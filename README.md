@@ -126,7 +126,7 @@ loan-approval-prediction/
 
 ### Home Page
 
-![Home](screenshots/home.png)
+![Home](screenshots/hp.png)
 
 ### Loan Approved
 
