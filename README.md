@@ -130,11 +130,7 @@ loan-approval-prediction/
 
 ### Loan Approved
 
-![Approved](screenshots/approved_result.gif)
-
-### Loan Rejected
-
-![Rejected](screenshots/rejected_result.gif)
+![Approved](screenshots/appr.png)
 
 ---
 
